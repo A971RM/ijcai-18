@@ -59,8 +59,8 @@ def dealitemcateprop(itemrow, debug=False):
             pre_prop_list += tmplist
 
     # the cross set
-    same_cate = len(set(cate_list) ^ set(pre_cate_list))
-    same_prop = len(set(prop_list) ^ set(pre_prop_list))
+    same_cate = len(set(cate_list) & set(pre_cate_list))
+    same_prop = len(set(prop_list) & set(pre_prop_list))
 
     if debug:
         print("item_category_list: \n", itemrow['item_category_list'])
